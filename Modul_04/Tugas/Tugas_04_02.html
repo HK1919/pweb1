@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Filter Alumni</title>
+    <link rel="stylesheet" href="style/style_04_02.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Daftar Alumni</h1>
+      <h1>Fakultas Ilmu Komputer</h1>
+      <h1>Universitas Kuningan</h1>
+
+      <input
+        type="text"
+        id="searchInput"
+        placeholder="Cari berdasarkan nama atau jurusan..."
+        onkeyup="filterAlumni()"
+      />
+      <ul id="alumniList">
+        <!-- Jurusan Sistem Informasi -->
+        <li data-name="Alya Khandriyani" data-major="Sistem Informasi">
+          Alya Khandriyani - Sistem Informasi
+        </li>
+        <li data-name="Angga Wira Firmansyah" data-major="Sistem Informasi">
+          Angga Wira Firmansyah - Sistem Informasi
+        </li>
+        <li data-name="Cecilia Aisyah Az Zahra" data-major="Sistem Informasi">
+          Cecilia Aisyah Az Zahra - Sistem Informasi
+        </li>
+        <li data-name="Dea Feby Sulistiani" data-major="Sistem Informasi">
+          Dea Feby Sulistiani - Sistem Informasi
+        </li>
+        <li data-name="Dea Yulistiana Dewi" data-major="Sistem Informasi">
+          Dea Yulistiana Dewi - Sistem Informasi
+        </li>
+        <li data-name="Dhani Triyadi" data-major="Sistem Informasi">
+          Dhani Triyadi - Sistem Informasi
+        </li>
+
+        <!-- Jurusan Teknik Informatika -->
+        <li data-name="Farhan Nurrohman" data-major="Teknik Informatika">
+          Farhan Nurrohman - Teknik Informatika
+        </li>
+        <li data-name="Febri Putra Pratama" data-major="Teknik Informatika">
+          Febri Putra Pratama - Teknik Informatika
+        </li>
+        <li data-name="Haikal Kamil" data-major="Teknik Informatika">
+          Haikal Kamil - Teknik Informatika
+        </li>
+        <li data-name="Hari Inaka Hermawan" data-major="Teknik Informatika">
+          Hari Inaka Hermawan - Teknik Informatika
+        </li>
+        <li data-name="Ilham Taufiqurrohman" data-major="Teknik Informatika">
+          Ilham Taufiqurrohman - Teknik Informatika
+        </li>
+        <li data-name="Irdan Guntara" data-major="Teknik Informatika">
+          Irdan Guntara - Teknik Informatika
+        </li>
+
+        <!-- Jurusan Desain Komunikasi Visual -->
+        <li data-name="Muhammad Ikhsan" data-major="Desain Komunikasi Visual">
+          Muhammad Ikhsan - Desain Komunikasi Visual
+        </li>
+        <li data-name="Muhammad Nasik" data-major="Desain Komunikasi Visual">
+          Muhammad Nasik - Desain Komunikasi Visual
+        </li>
+        <li data-name="Muhammad Yudi" data-major="Desain Komunikasi Visual">
+          Muhammad Yudi - Desain Komunikasi Visual
+        </li>
+        <li data-name="Nadia Putri" data-major="Desain Komunikasi Visual">
+          Nadia Putri - Desain Komunikasi Visual
+        </li>
+        <li data-name="Nuryani" data-major="Desain Komunikasi Visual">
+          Nuryani - Desain Komunikasi Visual
+        </li>
+        <li data-name="Ridan Alfiandi" data-major="Desain Komunikasi Visual">
+          Ridan Alfiandi - Desain Komunikasi Visual
+        </li>
+
+        <!-- Jurusan Manajemen Informatika -->
+        <li data-name="Silvianita" data-major="Manajemen Informatika">
+          Silvianita - Manajemen Informatika
+        </li>
+        <li data-name="Kiki Amalia Sapitri" data-major="Manajemen Informatika">
+          Kiki Amalia Sapitri - Manajemen Informatika
+        </li>
+        <li
+          data-name="Mochamad Arya Pramandita"
+          data-major="Manajemen Informatika"
+        >
+          Mochamad Arya Pramandita - Manajemen Informatika
+        </li>
+        <li data-name="Sendy Febriana" data-major="Manajemen Informatika">
+          Sendy Febriana - Manajemen Informatika
+        </li>
+        <li data-name="Shakti Rayhan" data-major="Manajemen Informatika">
+          Shakti Rayhan - Manajemen Informatika
+        </li>
+        <li data-name="Dika Suganda" data-major="Manajemen Informatika">
+          Dika Suganda - Manajemen Informatika
+        </li>
+        <li data-name="Evie Ardiyanti" data-major="Manajemen Informatika">
+          Evie Ardiyanti - Manajemen Informatika
+        </li>
+      </ul>
+    </div>
+    <script>
+      function filterAlumni() {
+        const input = document.getElementById("searchInput");
+        const filter = input.value.toLowerCase();
+        const list = document.getElementById("alumniList");
+        const items = list.getElementsByTagName("li");
+
+        for (let i = 0; i < items.length; i++) {
+          const name = items[i].getAttribute("data-name").toLowerCase();
+          const major = items[i].getAttribute("data-major").toLowerCase();
+
+          if (name.includes(filter) || major.includes(filter)) {
+            items[i].style.display = "";
+          } else {
+            items[i].style.display = "none";
+          }
+        }
+      }
+    </script>
+  </body>
+</html>
