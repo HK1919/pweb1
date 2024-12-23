@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fungsi dan Scoop dalam JavaScript</title>
+  </head>
+  <body>
+    <script>
+      // Fungsi Sederhana
+      function tambah(a, b) {
+        return a + b;
+      }
+
+      // Fungsi dengan parameter default
+      function greet(nama = "pengguna") {
+        console.log("Hallo " + nama + "!");
+      }
+
+      // Fungsi dengan fungsi di dalamnya
+      function outerFunction() {
+        let outerVar = "Variabel Luar";
+        function innerFunction() {
+          let innerVar = "Variabel dalam";
+          console.log(outerVar); // Akses variabel luar
+          console.log(innerVar); // Akses variabel dalam
+        }
+        innerFunction();
+      }
+
+      // Memanggil fungsi
+      console.log("Hasil Penjumlahan : " + tambah(5, 10));
+      greet("John");
+      outerFunction();
+
+      // Scope
+      let globalVar = "Variabel Global";
+      function checkScope() {
+        let localVar = "Variabel Lokal";
+        console.log(globalVar); // Akses Variabel global
+        console.log(localVar); // Akses Variabel lokal
+      }
+
+      checkScope();
+      // console.log(lokalVar); // Ini akan menghasilkan error karena lokalVar tudak dapat diakses di sini
+    </script>
+  </body>
+</html>

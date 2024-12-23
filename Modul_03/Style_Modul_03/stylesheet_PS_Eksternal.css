@@ -1,0 +1,19 @@
+h1 {
+  font-family: monospace;
+  font-size: 36px;
+  text-align: center;
+  padding: 10px;
+  border: 2px solid black;
+  border-radius: 25px;
+  color: orange;
+}
+
+h1:hover {
+  color: white;
+  background-color: red;
+}
+
+p {
+  font-size: 24px;
+  color: blue;
+}

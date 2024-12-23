@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web Alumni UNIKU</title>
+    <link rel="stylesheet" href="style/style_05_03.css" />
+  </head>
+  <body>
+    <h1>Web Alumni UNIKU</h1>
+
+    <!-- Event Mouse -->
+    <button id="contactButton">Hubungi Alumni</button>
+    <div id="hoverProfile">
+      <img src="img/HaikalKamil.png" alt="Profil Alumni 1" />
+    </div>
+
+    <!-- Event Keyboard -->
+    <input type="text" id="searchAlumni" placeholder="Cari Alumni..." />
+
+    <!-- Event form -->
+    <form id="alumniForm">
+      <label for="name">Nama Alumni : </label>
+      <input
+        type="text"
+        id="name"
+        name="name"
+        placeholder="Masukan nama alumni"
+      />
+
+      <label for="year">Tahun kelulusan</label>
+      <input
+        type="text"
+        id="year"
+        name="year"
+        placeholder="Masukan tahun kelulusan"
+      />
+
+      <label for="photo">Photo Alumni</label>
+      <input type="file" id="photo" name="photo" accept="image/*" />
+
+      <button type="submit">Tambahkan Alumni</button>
+    </form>
+
+    <!-- Tabel data alumni -->
+    <table id="alumniTable">
+      <thead>
+        <tr>
+          <th>Nama Alumni</th>
+          <th>Tahun Kelulusan</th>
+          <th>Photo</th>
+          <th>Aksi</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Data alumni akan ditambahkan di sini -->
+      </tbody>
+    </table>
+
+    <!-- Event Dokumen/Window -->
+    <p id="windowSize">Ukuran jendela</p>
+
+    <!-- Output untuk event kustom -->
+    <p id="output"></p>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/script_05_03.js"></script>
+  </body>
+</html>
